@@ -1,0 +1,1511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sure Lock & Key — Trusted Locksmith & Home Security Services</title>
+<meta name="description" content="Family-owned locksmith and home security services. Licensed technicians, 24/7 emergency service, residential & commercial. Call (203) 769-9166.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --cream: #F5F1E8;
+    --cream-dark: #EDE5D3;
+    --ink: #1C1814;
+    --ink-soft: #3A342E;
+    --brass: #9C7C3C;
+    --brass-dark: #7D5F29;
+    --rust: #A63D2A;
+    --rust-dark: #8A3222;
+    --sage: #6B7F5C;
+    --paper: #FAF7F0;
+    --line: #D4CCB8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+  /* ============ EMERGENCY BANNER ============ */
+  .emergency-bar {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 10px 0;
+    font-size: 13px;
+    letter-spacing: 0.02em;
+  }
+  .emergency-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .emergency-bar .pulse {
+    display: inline-block;
+    width: 8px; height: 8px;
+    background: var(--rust);
+    border-radius: 50%;
+    margin-right: 8px;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.3); }
+  }
+  .emergency-bar a {
+    color: var(--paper);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .emergency-bar a:hover { color: var(--brass); }
+
+  /* ============ HEADER ============ */
+  header {
+    background: rgba(250, 247, 240, 0.95);
+    border-bottom: 1px solid var(--line);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+  }
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .logo-mark {
+    width: 44px; height: 44px;
+    background: var(--ink);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .logo-mark::before {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    border: 1.5px solid var(--brass);
+    border-radius: 50%;
+  }
+  .logo-mark svg { width: 22px; height: 22px; color: var(--brass); }
+  .logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+  }
+  .logo-text .name {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 19px;
+    letter-spacing: -0.01em;
+  }
+  .logo-text .tag {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--brass-dark);
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 36px;
+    align-items: center;
+  }
+  nav a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  nav a:hover { color: var(--rust); }
+  .header-cta {
+    background: var(--ink);
+    color: var(--paper) !important;
+    padding: 11px 20px;
+    border-radius: 999px;
+    font-weight: 600 !important;
+    transition: background 0.2s;
+  }
+  .header-cta:hover { background: var(--rust) !important; color: var(--paper) !important; }
+
+  @media (max-width: 860px) {
+    nav ul li:not(.nav-cta) { display: none; }
+  }
+
+  /* ============ HERO ============ */
+  .hero {
+    padding: 80px 0 100px;
+    background: linear-gradient(180deg, var(--paper) 0%, var(--cream) 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 10%; right: -8%;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, var(--brass) 0%, transparent 70%);
+    opacity: 0.06;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .hero .container {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    position: relative;
+  }
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--brass-dark);
+    margin-bottom: 24px;
+    font-weight: 600;
+  }
+  .hero-eyebrow::before {
+    content: "";
+    width: 28px; height: 1px;
+    background: var(--brass);
+  }
+  .hero h1 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(44px, 5.5vw, 72px);
+    font-weight: 500;
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    margin-bottom: 28px;
+    color: var(--ink);
+  }
+  .hero h1 em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--rust);
+  }
+  .hero-sub {
+    font-size: 18px;
+    color: var(--ink-soft);
+    margin-bottom: 36px;
+    max-width: 520px;
+    line-height: 1.65;
+  }
+  .hero-ctas {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 15px 26px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    transition: all 0.2s;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .btn-primary {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .btn-primary:hover {
+    background: var(--rust);
+    transform: translateY(-1px);
+  }
+  .btn-secondary {
+    background: transparent;
+    color: var(--ink);
+    border: 1.5px solid var(--ink);
+  }
+  .btn-secondary:hover {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .hero-trust {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .trust-item {
+    display: flex;
+    flex-direction: column;
+  }
+  .trust-item strong {
+    font-family: 'Fraunces', serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .trust-item span {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .hero-visual {
+    position: relative;
+    aspect-ratio: 4/5;
+    background: linear-gradient(135deg, var(--cream-dark) 0%, var(--cream) 50%, var(--paper) 100%);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 40px 80px -20px rgba(28, 24, 20, 0.2);
+  }
+  .hero-visual::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 30% 40%, rgba(156, 124, 60, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 70% 70%, rgba(166, 61, 42, 0.08) 0%, transparent 50%);
+  }
+  .key-illustration {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) rotate(-15deg);
+    width: 70%;
+    z-index: 2;
+  }
+  .hero-badge {
+    position: absolute;
+    bottom: 32px; left: 32px;
+    background: var(--paper);
+    padding: 20px 24px;
+    border-radius: 4px;
+    z-index: 3;
+    box-shadow: 0 10px 30px -10px rgba(28, 24, 20, 0.2);
+    max-width: 280px;
+  }
+  .hero-badge .label {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--brass-dark);
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  .hero-badge .quote {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 15px;
+    line-height: 1.45;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+  .hero-badge .attrib {
+    font-size: 12px;
+    color: var(--ink-soft);
+  }
+  .hero-year {
+    position: absolute;
+    top: 32px; right: 32px;
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 120px;
+    line-height: 0.85;
+    color: var(--ink);
+    opacity: 0.08;
+    letter-spacing: -0.05em;
+    z-index: 1;
+  }
+
+  @media (max-width: 900px) {
+    .hero { padding: 50px 0 70px; }
+    .hero .container {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+    .hero-visual { max-width: 420px; margin: 0 auto; width: 100%; }
+    .hero-year { font-size: 72px; }
+  }
+
+  /* ============ SECTION HEADERS ============ */
+  .section { padding: 100px 0; }
+  .section-eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--brass-dark);
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+  .section-title {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+    max-width: 700px;
+  }
+  .section-title em { font-style: italic; color: var(--rust); font-weight: 400; }
+  .section-lede {
+    font-size: 18px;
+    color: var(--ink-soft);
+    max-width: 700px;
+    margin-bottom: 64px;
+    line-height: 1.65;
+  }
+
+  /* ============ SERVICES (DETAILED) ============ */
+  .services { background: var(--paper); border-top: 1px solid var(--line); }
+  .services-intro {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
+    margin-bottom: 80px;
+    align-items: start;
+  }
+  .service-detail {
+    padding: 64px 0;
+    border-top: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: 1fr 1.8fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .service-detail:first-of-type { border-top: none; padding-top: 0; }
+  .service-detail-side {
+    position: sticky;
+    top: 100px;
+  }
+  .service-detail-icon {
+    width: 72px; height: 72px;
+    background: var(--ink);
+    color: var(--brass);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+  .service-detail-icon svg { width: 32px; height: 32px; }
+  .service-detail-side h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin-bottom: 16px;
+  }
+  .service-tagline {
+    font-style: italic;
+    color: var(--brass-dark);
+    font-family: 'Fraunces', serif;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .service-content {
+    color: var(--ink-soft);
+  }
+  .service-content p {
+    font-size: 16px;
+    line-height: 1.75;
+    margin-bottom: 18px;
+  }
+  .service-content p strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+  .service-when {
+    margin-top: 28px;
+    padding: 24px 28px;
+    background: var(--cream);
+    border-left: 3px solid var(--brass);
+    border-radius: 0 4px 4px 0;
+  }
+  .service-when .label {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--brass-dark);
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+  .service-when ul {
+    list-style: none;
+    display: grid;
+    gap: 10px;
+  }
+  .service-when li {
+    font-size: 14px;
+    color: var(--ink);
+    padding-left: 22px;
+    position: relative;
+    line-height: 1.5;
+  }
+  .service-when li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 12px;
+    height: 1px;
+    background: var(--brass);
+  }
+
+  @media (max-width: 900px) {
+    .services-intro { grid-template-columns: 1fr; gap: 24px; margin-bottom: 60px; }
+    .service-detail { grid-template-columns: 1fr; gap: 32px; padding: 48px 0; }
+    .service-detail-side { position: static; }
+  }
+
+  /* ============ APPROACH / HOW IT WORKS ============ */
+  .approach {
+    background: var(--ink);
+    color: var(--paper);
+    position: relative;
+    overflow: hidden;
+  }
+  .approach::before {
+    content: "";
+    position: absolute;
+    top: -20%; left: -10%;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, var(--brass) 0%, transparent 70%);
+    opacity: 0.1;
+  }
+  .approach .section-eyebrow { color: var(--brass); }
+  .approach .section-title { color: var(--paper); }
+  .approach .section-title em { color: var(--brass); }
+  .approach .section-lede { color: rgba(245, 241, 232, 0.7); }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    position: relative;
+  }
+  .steps-grid::before {
+    content: "";
+    position: absolute;
+    top: 28px;
+    left: 12.5%;
+    right: 12.5%;
+    height: 1px;
+    background: rgba(156, 124, 60, 0.3);
+    z-index: 0;
+  }
+  .step { position: relative; z-index: 1; }
+  .step-num {
+    width: 56px; height: 56px;
+    background: var(--ink);
+    border: 1.5px solid var(--brass);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--brass);
+    margin-bottom: 24px;
+  }
+  .step h4 {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+    color: var(--paper);
+  }
+  .step p {
+    color: rgba(245, 241, 232, 0.7);
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  @media (max-width: 900px) {
+    .steps-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+    .steps-grid::before { display: none; }
+  }
+  @media (max-width: 500px) {
+    .steps-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ============ WHY US ============ */
+  .why-us { background: var(--paper); border-top: 1px solid var(--line); }
+  .why-us .container {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .why-visual {
+    aspect-ratio: 3/4;
+    background: var(--cream-dark);
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+  }
+  .why-visual::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--cream-dark) 0%, var(--brass) 100%);
+    opacity: 0.4;
+  }
+  .why-visual .stamp {
+    position: absolute;
+    bottom: 40px; left: 40px;
+    right: 40px;
+    background: var(--paper);
+    padding: 32px;
+    border-radius: 4px;
+    box-shadow: 0 20px 40px -10px rgba(28, 24, 20, 0.2);
+  }
+  .why-visual .stamp .est {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--brass-dark);
+    margin-bottom: 8px;
+  }
+  .why-visual .stamp .big {
+    font-family: 'Fraunces', serif;
+    font-size: 56px;
+    font-weight: 900;
+    line-height: 1;
+    color: var(--ink);
+    letter-spacing: -0.03em;
+  }
+  .why-visual .stamp .label {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-top: 8px;
+  }
+
+  .why-list { list-style: none; }
+  .why-list li {
+    padding: 28px 0;
+    border-bottom: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 24px;
+    align-items: start;
+  }
+  .why-list li:first-child { padding-top: 0; }
+  .why-list li:last-child { border-bottom: none; }
+  .why-num {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--rust);
+    line-height: 1;
+    padding-top: 4px;
+  }
+  .why-content h4 {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+  .why-content p {
+    color: var(--ink-soft);
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  @media (max-width: 900px) {
+    .why-us .container { grid-template-columns: 1fr; gap: 48px; }
+    .why-visual { max-width: 400px; }
+  }
+
+  /* ============ FAQ ============ */
+  .faq { background: var(--cream); border-top: 1px solid var(--line); }
+  .faq-list {
+    max-width: 860px;
+    margin: 0 auto;
+  }
+  .faq-item {
+    border-bottom: 1px solid var(--line);
+    padding: 28px 0;
+  }
+  .faq-item:first-child { padding-top: 0; }
+  .faq-item summary {
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 32px;
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+    color: var(--ink);
+    transition: color 0.2s;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary:hover { color: var(--rust); }
+  .faq-icon {
+    flex-shrink: 0;
+    width: 28px; height: 28px;
+    border: 1.5px solid var(--ink);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 2px;
+    transition: all 0.3s;
+  }
+  .faq-icon::before,
+  .faq-icon::after {
+    content: "";
+    position: absolute;
+    background: var(--ink);
+    transition: transform 0.3s;
+  }
+  .faq-icon::before {
+    width: 12px; height: 1.5px;
+  }
+  .faq-icon::after {
+    width: 1.5px; height: 12px;
+  }
+  .faq-item[open] .faq-icon {
+    background: var(--ink);
+  }
+  .faq-item[open] .faq-icon::before,
+  .faq-item[open] .faq-icon::after {
+    background: var(--paper);
+  }
+  .faq-item[open] .faq-icon::after {
+    transform: rotate(90deg);
+  }
+  .faq-answer {
+    margin-top: 18px;
+    padding-right: 60px;
+    color: var(--ink-soft);
+    font-size: 16px;
+    line-height: 1.75;
+  }
+  .faq-answer p { margin-bottom: 12px; }
+  .faq-answer p:last-child { margin-bottom: 0; }
+
+  @media (max-width: 600px) {
+    .faq-item summary { font-size: 18px; gap: 16px; }
+    .faq-answer { padding-right: 0; font-size: 15px; }
+  }
+
+  /* ============ TESTIMONIALS ============ */
+  .testimonials {
+    background: var(--paper);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 48px;
+  }
+  .testimonial {
+    padding: 36px 32px;
+    background: var(--cream);
+    border-radius: 4px;
+    position: relative;
+  }
+  .testimonial-stars {
+    color: var(--brass);
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+  }
+  .testimonial-quote {
+    font-family: 'Fraunces', serif;
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--ink);
+    margin-bottom: 24px;
+    font-weight: 400;
+  }
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+  }
+  .author-initials {
+    width: 40px; height: 40px;
+    background: var(--ink);
+    color: var(--brass);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fraunces', serif;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .author-info .name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .author-info .location {
+    font-size: 12px;
+    color: var(--ink-soft);
+  }
+
+  @media (max-width: 860px) {
+    .testimonials-grid { grid-template-columns: 1fr; gap: 20px; }
+  }
+
+  /* ============ CTA SECTION ============ */
+  .cta-section {
+    padding: 120px 0;
+    background: linear-gradient(180deg, var(--cream) 0%, var(--paper) 100%);
+    text-align: center;
+  }
+  .cta-section .container { max-width: 720px; }
+  .cta-section h2 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(38px, 5vw, 58px);
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+  }
+  .cta-section h2 em { font-style: italic; color: var(--rust); }
+  .cta-section p {
+    font-size: 18px;
+    color: var(--ink-soft);
+    margin-bottom: 40px;
+    line-height: 1.6;
+  }
+  .cta-phone {
+    display: inline-block;
+    font-family: 'Fraunces', serif;
+    font-size: clamp(42px, 6vw, 68px);
+    font-weight: 600;
+    color: var(--ink);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+    padding: 16px 32px;
+    border-radius: 6px;
+    transition: all 0.2s;
+    margin-bottom: 24px;
+  }
+  .cta-phone:hover {
+    color: var(--rust);
+    background: var(--paper);
+  }
+  .cta-availability {
+    font-size: 14px;
+    color: var(--ink-soft);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .availability-dot {
+    width: 8px; height: 8px;
+    background: var(--sage);
+    border-radius: 50%;
+    animation: pulse-soft 2s infinite;
+  }
+  @keyframes pulse-soft {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+
+  /* ============ FOOTER ============ */
+  footer {
+    background: var(--ink);
+    color: rgba(245, 241, 232, 0.65);
+    padding: 80px 0 40px;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 64px;
+  }
+  .footer-brand .logo-text .name { color: var(--paper); }
+  .footer-brand .logo-mark { background: var(--paper); }
+  .footer-brand .logo-mark::before { border-color: var(--ink); }
+  .footer-brand .logo-mark svg { color: var(--ink); }
+  .footer-brand p {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.65;
+    max-width: 320px;
+  }
+  .footer-phone {
+    display: inline-block;
+    margin-top: 20px;
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    color: var(--brass);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .footer-phone:hover { color: var(--paper); }
+  .footer-col h5 {
+    font-family: 'Fraunces', serif;
+    font-size: 14px;
+    color: var(--paper);
+    margin-bottom: 20px;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 10px; }
+  .footer-col a {
+    color: rgba(245, 241, 232, 0.65);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+  }
+  .footer-col a:hover { color: var(--brass); }
+  .footer-bottom {
+    padding-top: 32px;
+    border-top: 1px solid rgba(245, 241, 232, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .footer-license {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    color: var(--brass);
+  }
+
+  @media (max-width: 860px) {
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+    .footer-brand { grid-column: 1 / -1; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Emergency Bar -->
+<div class="emergency-bar">
+  <div class="container">
+    <div><span class="pulse"></span> 24/7 Emergency Lockout Service Available</div>
+    <div>Call now: <a href="tel:+12037699166">(203) 769-9166</a></div>
+  </div>
+</div>
+
+<!-- Header -->
+<header>
+  <div class="container">
+    <a href="#" class="logo">
+      <div class="logo-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="5" y="11" width="14" height="10" rx="2"/>
+          <path d="M8 11V7a4 4 0 0 1 8 0v4"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="name">Sure Lock & Key</span>
+        <span class="tag">Est. 1987</span>
+      </div>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#approach">How We Work</a></li>
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li class="nav-cta"><a href="tel:+12037699166" class="header-cta">Call (203) 769-9166</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-eyebrow">Family-owned since 1987</div>
+      <h1>The locksmith you <em>actually</em> want to recommend.</h1>
+      <p class="hero-sub">Licensed technicians. Honest work. A 38-year reputation built one door at a time. Residential, commercial, and automotive locksmith services — from emergency lockouts to complete home security upgrades.</p>
+      <div class="hero-ctas">
+        <a href="tel:+12037699166" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (203) 769-9166
+        </a>
+        <a href="#services" class="btn btn-secondary">Explore Services</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item">
+          <strong>38</strong>
+          <span>Years in business</span>
+        </div>
+        <div class="trust-item">
+          <strong>4.9★</strong>
+          <span>1,200+ Reviews</span>
+        </div>
+        <div class="trust-item">
+          <strong>24/7</strong>
+          <span>Emergency service</span>
+        </div>
+        <div class="trust-item">
+          <strong>100%</strong>
+          <span>Licensed & insured</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-year">1987</div>
+      <svg class="key-illustration" viewBox="0 0 200 80" fill="none" stroke="#1C1814" stroke-width="2.5">
+        <circle cx="30" cy="40" r="22" fill="#9C7C3C" stroke="#1C1814"/>
+        <circle cx="30" cy="40" r="8" fill="#F5F1E8" stroke="#1C1814"/>
+        <path d="M52 40 L180 40" stroke-width="4" stroke="#9C7C3C"/>
+        <path d="M160 40 L160 52 M150 40 L150 52 M140 40 L140 48" stroke-width="4" stroke="#9C7C3C"/>
+        <path d="M178 40 L178 55" stroke-width="4" stroke="#9C7C3C"/>
+      </svg>
+      <div class="hero-badge">
+        <div class="label">★ ★ ★ ★ ★</div>
+        <div class="quote">"Third generation of my family to call Sure Lock. Honest people, careful work, and they always explain what they're doing."</div>
+        <div class="attrib">— Marcus T., verified customer</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services (Detailed & Educational) -->
+<section class="section services" id="services">
+  <div class="container">
+    <div class="services-intro">
+      <div>
+        <div class="section-eyebrow">Our services</div>
+        <h2 class="section-title">Every door, every lock, <em>every time.</em></h2>
+      </div>
+      <p class="section-lede">Sure Lock & Key offers a full spectrum of locksmith services for homes, businesses, and vehicles. Below is what each service involves, when you might need it, and how our technicians handle it. If you're not sure which service fits your situation — call us and we'll help you figure it out.</p>
+    </div>
+
+    <!-- Service 1: Residential Rekeying -->
+    <div class="service-detail">
+      <div class="service-detail-side">
+        <div class="service-detail-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="5" y="11" width="14" height="10" rx="2"/>
+            <path d="M8 11V7a4 4 0 0 1 8 0v4"/>
+            <circle cx="12" cy="16" r="1.5" fill="currentColor"/>
+          </svg>
+        </div>
+        <h3>Residential Rekeying</h3>
+        <p class="service-tagline">Change who has access — without changing the lock.</p>
+      </div>
+      <div class="service-content">
+        <p>Rekeying is the process of changing the internal pin configuration of an existing lock so that old keys no longer work. A new key is cut to match the new pin setup. The lock itself stays — only the "combination" inside changes.</p>
+        <p>It's significantly more affordable than replacing every lock in your home, and when done properly by a licensed technician, it's just as secure. <strong>Rekeying is recommended any time you can't account for every copy of a key that's ever been made for your home.</strong></p>
+        <p>Our rekey service covers every exterior lock on your property, includes up to four newly cut keys, and comes with a compatibility check on every deadbolt and lever to make sure nothing is worn, loose, or misaligned. If we find a problem during the inspection, we'll tell you before we do anything about it.</p>
+        <div class="service-when">
+          <div class="label">Consider rekeying if</div>
+          <ul>
+            <li>You just closed on a new home and don't know who else has keys</li>
+            <li>You've lost a key — or the key was stolen along with something identifying your address</li>
+            <li>A roommate, tenant, or housekeeper has moved out</li>
+            <li>You've gone through a divorce, breakup, or household change</li>
+            <li>You've had contractors, cleaners, or dog walkers with key access</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service 2: Emergency Lockout -->
+    <div class="service-detail">
+      <div class="service-detail-side">
+        <div class="service-detail-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M12 7v5l3 3"/>
+          </svg>
+        </div>
+        <h3>Emergency Lockouts</h3>
+        <p class="service-tagline">Locked out? We can be there within the hour.</p>
+      </div>
+      <div class="service-content">
+        <p>Lockouts happen at the worst times — late at night, in bad weather, with kids or pets on the wrong side of the door. Our emergency lockout service is available 24 hours a day, seven days a week, and covers homes, cars, and businesses.</p>
+        <p>Our technicians use <strong>non-destructive entry techniques</strong> whenever possible. That means no drilling, no broken hardware, no damaged doors. In the rare case that destructive entry is required (usually with specific high-security locks), we'll explain exactly why before we start and what it will cost to restore the lock afterward.</p>
+        <p>For automotive lockouts, we service most makes and models including European vehicles and Tesla. Our technicians carry the programming tools needed to handle transponder keys and key fobs on-site — you don't need to have your car towed to a dealership.</p>
+        <div class="service-when">
+          <div class="label">Common lockout situations</div>
+          <ul>
+            <li>Keys locked inside your home, car, or office</li>
+            <li>Key broken off inside the lock or ignition</li>
+            <li>Lost keys with no spare available</li>
+            <li>Electronic or smart lock malfunction</li>
+            <li>Jammed or frozen deadbolt that won't turn</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service 3: Smart Lock Install -->
+    <div class="service-detail">
+      <div class="service-detail-side">
+        <div class="service-detail-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="3" y="10" width="18" height="11" rx="2"/>
+            <path d="M7 10V6a5 5 0 0 1 10 0v4"/>
+            <path d="M12 15v3"/>
+          </svg>
+        </div>
+        <h3>Smart Lock Installation</h3>
+        <p class="service-tagline">Keyless entry, done right the first time.</p>
+      </div>
+      <div class="service-content">
+        <p>Smart locks have come a long way — but they're only as reliable as the installation. A keypad deadbolt mounted on a misaligned door will jam. A Wi-Fi lock paired to the wrong network will disconnect weekly. A smart lock programmed without proper user codes becomes a security liability.</p>
+        <p>We install and configure smart locks from <strong>Schlage, Yale, August, Kwikset, Level, and Baldwin</strong>, and we'll recommend the right model for your door type, existing hardware, and how you actually plan to use it. Keypad-only, Bluetooth-to-phone, Wi-Fi-connected, or Z-Wave/Matter for home automation — each has different tradeoffs.</p>
+        <p>The installation includes a full door-alignment check, weatherproofing of the strike plate, programming of primary user codes, guest code setup, and a walkthrough of the app so you understand what you're using. We'll also explain the battery life expectations and what to do if the lock ever loses power.</p>
+        <div class="service-when">
+          <div class="label">Smart lock installs make sense for</div>
+          <ul>
+            <li>Short-term rental owners managing guest access remotely</li>
+            <li>Busy households where everyone needs their own code</li>
+            <li>Homeowners who regularly forget or lose keys</li>
+            <li>Parents who want to know when kids get home from school</li>
+            <li>Homes with dog walkers, cleaners, or regular visitors</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service 4: Key Duplication & FOB -->
+    <div class="service-detail">
+      <div class="service-detail-side">
+        <div class="service-detail-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="8" cy="8" r="6"/>
+            <path d="M11 11l10 10M17 17l4 0M17 17l0 4"/>
+          </svg>
+        </div>
+        <h3>Key Duplication, Fobs & Transponders</h3>
+        <p class="service-tagline">Every key type, every vehicle, same day.</p>
+      </div>
+      <div class="service-content">
+        <p>Not all key duplication is the same. A standard house key takes thirty seconds at a hardware store — but a modern car key fob, a laser-cut high-security key, or a programmed transponder needs specialized equipment that most general-purpose kiosks don't have.</p>
+        <p>Sure Lock & Key duplicates and programs: <strong>standard house keys, high-security keys (Medeco, Mul-T-Lock, Abloy, Schlage Primus), laser-cut automotive keys, transponder keys, key fobs, remote head keys, and smart proximity keys</strong>. For most vehicles we can cut and program on the spot without a dealership visit.</p>
+        <p>If you're wondering whether we can handle your specific key, call us with the make, model, and year of your vehicle — or the brand stamped on your house key — and we'll tell you in under a minute. We don't guess.</p>
+        <div class="service-when">
+          <div class="label">Good reasons to duplicate keys</div>
+          <ul>
+            <li>Keeping a spare somewhere safe (not under the doormat)</li>
+            <li>New driver in the family getting their own car key</li>
+            <li>Replacing a worn key before it breaks in the lock</li>
+            <li>Adding a house key for a family member or trusted neighbor</li>
+            <li>Replacing a lost automotive key fob without dealership pricing</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service 5: Safes -->
+    <div class="service-detail">
+      <div class="service-detail-side">
+        <div class="service-detail-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="4" y="6" width="16" height="14" rx="2"/>
+            <circle cx="12" cy="13" r="3"/>
+            <path d="M12 3v3"/>
+          </svg>
+        </div>
+        <h3>Safes — Sales, Installation & Opening</h3>
+        <p class="service-tagline">Fire-rated, burglar-rated, and everything between.</p>
+      </div>
+      <div class="service-content">
+        <p>We sell, install, and service home and business safes from <strong>Liberty, Browning, AMSEC, and Champion</strong>. Choosing the right safe isn't just about size — it's about what you're protecting, from what, and for how long.</p>
+        <p>Fire-rated safes protect documents and digital media from heat. Burglar-rated safes resist forced entry. <strong>Most quality residential safes offer some protection from both, but the ratings matter</strong> — a one-hour fire rating is very different from a 30-minute rating, and a B-rated burglar safe is dramatically more resistant than a basic residential model.</p>
+        <p>If you already own a safe and you've lost the combination, inherited a safe you can't open, or have a mechanical or electronic lock that's failed, our technicians can open most safes non-destructively. We'll give you an honest assessment before we start: some safes are worth opening; some are better replaced.</p>
+        <div class="service-when">
+          <div class="label">A safe is worth considering for</div>
+          <ul>
+            <li>Firearms — required by law in many jurisdictions</li>
+            <li>Birth certificates, passports, and other original documents</li>
+            <li>Heirloom jewelry and watches</li>
+            <li>Hard drives and backup media for small businesses</li>
+            <li>Cash reserves and collectibles</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service 6: Commercial -->
+    <div class="service-detail">
+      <div class="service-detail-side">
+        <div class="service-detail-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M3 21h18M6 21V10l6-5 6 5v11"/>
+            <path d="M10 21v-6h4v6"/>
+          </svg>
+        </div>
+        <h3>Commercial Security</h3>
+        <p class="service-tagline">Master key systems, access control, and more.</p>
+      </div>
+      <div class="service-content">
+        <p>Businesses have security needs that go beyond residential locksmithing. We work with offices, retail locations, restaurants, medical practices, property managers, and industrial facilities on everything from simple rekeying to complete access control rollouts.</p>
+        <p>Our commercial services include: <strong>master key systems</strong> (one key opens designated doors, others are restricted), <strong>keyless access control</strong> (card readers, keypad entry, biometric systems), <strong>panic bars and exit devices</strong> (code-compliant for fire exits), <strong>high-security hardware</strong> (pick-resistant, drill-resistant, bump-proof), and <strong>door closers, hinges, and commercial-grade deadbolts</strong>.</p>
+        <p>Every commercial job starts with a site walk. We assess your actual access patterns, identify the vulnerabilities, and recommend only what your facility genuinely needs. No upselling you into systems that don't match your business model.</p>
+        <div class="service-when">
+          <div class="label">Common commercial requests</div>
+          <ul>
+            <li>Rekeying after employee turnover or ownership change</li>
+            <li>Setting up master key systems for multi-room facilities</li>
+            <li>Upgrading from keys to keypad or card-reader access</li>
+            <li>Installing panic hardware for fire-code compliance</li>
+            <li>Securing file rooms, medical cabinets, or server closets</li>
+            <li>Multi-tenant property rekeying for landlords</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How We Work -->
+<section class="section approach" id="approach">
+  <div class="container">
+    <div class="section-eyebrow">How we work</div>
+    <h2 class="section-title">Four steps. <em>No surprises.</em></h2>
+    <p class="section-lede">From the first call to the last turn of the key — a process designed around your time, your door, and your peace of mind.</p>
+
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-num">I</div>
+        <h4>You call us</h4>
+        <p>Call (203) 769-9166 any time, day or night. A real person answers — not a call center. We'll ask the right questions to understand your situation and match you with the right technician.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">II</div>
+        <h4>We explain the work</h4>
+        <p>Before we dispatch, you'll know what the service involves, how long it will take, and what to expect when the technician arrives. No guessing, no vague "we'll know when we see it" answers.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">III</div>
+        <h4>Your technician arrives</h4>
+        <p>A licensed, background-checked Sure Lock employee arrives in a marked truck. They'll show credentials before picking up a tool and walk you through exactly what they're about to do.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">IV</div>
+        <h4>The job is done right</h4>
+        <p>Every service comes with a 12-month workmanship warranty. If something we installed, rekeyed, or programmed fails within a year, we come back and fix it. No charge. No debate.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Us -->
+<section class="section why-us" id="story">
+  <div class="container">
+    <div class="why-visual">
+      <div class="stamp">
+        <div class="est">Established</div>
+        <div class="big">1987</div>
+        <div class="label">Third generation, family-owned</div>
+      </div>
+    </div>
+    <div>
+      <div class="section-eyebrow">Our story</div>
+      <h2 class="section-title">Built by a family. <em>For families.</em></h2>
+      <p class="section-lede">Sure Lock & Key was founded in 1987 by Harold Bennett out of a pickup truck. Today his son and grandson run the business — with a full team of licensed technicians and the same promise Harold made on his first call: fair work, honestly done, no surprises.</p>
+
+      <ol class="why-list">
+        <li>
+          <div class="why-num">01</div>
+          <div class="why-content">
+            <h4>Licensed, bonded, and background-checked.</h4>
+            <p>Every technician carries valid state locksmith licensing and passes an annual background check. We'll show you the credentials before we pick up the tools — because letting a stranger near your locks is a matter of trust, and trust starts with paperwork.</p>
+          </div>
+        </li>
+        <li>
+          <div class="why-num">02</div>
+          <div class="why-content">
+            <h4>Straight talk. Every time.</h4>
+            <p>We explain what your lock actually needs — not what costs the most to fix. If rekeying will solve your problem, we'll tell you that instead of selling you a full replacement. The long-term customer is worth more than the big ticket.</p>
+          </div>
+        </li>
+        <li>
+          <div class="why-num">03</div>
+          <div class="why-content">
+            <h4>Dispatched, not outsourced.</h4>
+            <p>Unlike national chains that forward your call to whichever contractor is nearest, every Sure Lock technician is our direct employee — trained in our shop, driving our trucks, answering to our name. If something isn't right, you know exactly who to call.</p>
+          </div>
+        </li>
+        <li>
+          <div class="why-num">04</div>
+          <div class="why-content">
+            <h4>One-year workmanship warranty.</h4>
+            <p>If the lock we installed, the rekey we completed, or the hardware we programmed fails within 12 months for any reason other than misuse, we come back and fix it at no charge. It's written into every invoice.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq" id="faq">
+  <div class="container">
+    <div class="section-eyebrow">Frequently asked</div>
+    <h2 class="section-title">Common questions, <em>answered honestly.</em></h2>
+    <p class="section-lede">If your question isn't here, call us at (203) 769-9166 — we're happy to answer anything, even if you're not ready to book a service.</p>
+
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>
+          <span>Is rekeying as secure as installing new locks?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-answer">
+          <p>Yes — when done properly by a licensed locksmith, rekeying is just as secure as installing a new lock. The lock body itself isn't the weak point; the pin configuration is what a key works against, and rekeying completely replaces that configuration. Old keys will no longer turn the lock.</p>
+          <p>The one exception is if the existing lock is physically damaged, worn out, or of very low quality. In that case, replacement makes more sense than rekeying. Our technicians will inspect the hardware during a rekey and tell you honestly if replacement is the better call.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span>How quickly can you arrive for an emergency lockout?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-answer">
+          <p>In most cases, within 30 to 60 minutes of your call — depending on your location and the time of day. We have technicians on call 24/7, and our dispatcher will give you a realistic ETA when you call.</p>
+          <p>If we estimate a longer wait than you can manage (for example, if you're locked out in bad weather with children), we'll tell you upfront so you can make an informed decision about whether to wait for us or find another option.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span>Can you make a car key without the original?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-answer">
+          <p>In most cases, yes. For vehicles manufactured in the last 25 years, we can generate a new key from the vehicle's lock or ignition, then program it to your car's computer so it starts the engine. This includes transponder keys, laser-cut keys, and most key fobs.</p>
+          <p>A few modern vehicles — especially certain European luxury models and the newest Teslas — require specialized dealership tools. If your vehicle falls into that category, we'll tell you before dispatching so you don't pay for a trip we can't complete.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span>Will a locksmith try to drill my lock unnecessarily?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-answer">
+          <p>Unfortunately, some will — which is why this question exists. Drilling is a quick, easy way to open a lock, and some less-reputable locksmiths default to it because it takes less skill and time. Drilling destroys the lock, which means you then have to pay for new hardware.</p>
+          <p>Our technicians are trained in non-destructive entry methods and use them as a first resort. Drilling is a last option, reserved for specific high-security locks where picking isn't mechanically possible, or situations where the lock is already damaged. If we need to drill, we'll explain exactly why before doing it.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span>Should I replace all my locks when I move into a new home?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-answer">
+          <p>Rekey them — don't necessarily replace them. When you buy a home, there's no way to know how many copies of the keys are floating around: previous owners, contractors, real estate agents, cleaners, neighbors. Rekeying resets that completely, usually at a fraction of the cost of replacing every lock.</p>
+          <p>Replacement only makes sense if the existing hardware is in poor condition, isn't the right grade for your security needs, or if you're upgrading to something smart/keyless. Any good locksmith will tell you honestly which option fits your situation.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span>Do smart locks work during a power outage?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-answer">
+          <p>Yes. Virtually all residential smart locks run on batteries, not household power, so a power outage has no effect on them. Most have battery life of 6 to 12 months depending on usage, and nearly all provide low-battery warnings through the connected app and physical beeps on the lock itself.</p>
+          <p>Separately, most smart locks also include a traditional keyed override — meaning you can still open the door with a physical key if the batteries fail completely. We always verify this override works during installation and make sure you have a backup key stored somewhere safe.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span>How can I tell if a locksmith is legitimate?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-answer">
+          <p>Ask for their license number and insurance information before they start work. A legitimate locksmith will provide both without hesitation. You can verify the license with your state's locksmith licensing board — most have online lookup tools.</p>
+          <p>Also watch for a few warning signs: technicians who arrive in unmarked vehicles, refusal to provide written estimates, pricing that changes dramatically once they arrive, and businesses that don't answer the phone with a specific company name. Our technicians arrive in marked Sure Lock & Key trucks, wear identification, and carry documentation.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span>What's the difference between a high-security lock and a standard deadbolt?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-answer">
+          <p>High-security locks are built to resist three specific attack methods that standard deadbolts can't: <strong>picking</strong> (using tools to manipulate the pins), <strong>bumping</strong> (tapping a special key to briefly align the pins), and <strong>drilling</strong> (using a power drill to destroy the lock cylinder). Brands like Medeco, Mul-T-Lock, and Abloy build these protections into the lock hardware itself.</p>
+          <p>Standard residential deadbolts protect against casual break-in attempts but offer limited protection against a determined attacker with skill or specialized tools. For most homes, a high-quality standard deadbolt is sufficient. High-security locks make sense for higher-risk properties, homes with valuable contents, or homeowners who want the additional peace of mind.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="section testimonials">
+  <div class="container">
+    <div class="section-eyebrow">What customers say</div>
+    <h2 class="section-title">Twelve hundred reviews. <em>Here are three.</em></h2>
+
+    <div class="testimonials-grid">
+      <div class="testimonial">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-quote">Called at 11 PM after locking myself out in a thunderstorm. Tech was on my porch in 22 minutes, got me in without damaging the lock, and walked me through how to avoid it happening again. Honest, kind, professional.</div>
+        <div class="testimonial-author">
+          <div class="author-initials">MT</div>
+          <div class="author-info">
+            <div class="name">Marcus T.</div>
+            <div class="location">Verified customer · July 2025</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-quote">Just closed on a home. Sure Lock rekeyed every exterior lock, installed a new smart deadbolt, and spent twenty minutes showing us how to program guest codes for family. Done in 90 minutes. Patient with every question we asked.</div>
+        <div class="testimonial-author">
+          <div class="author-initials">EK</div>
+          <div class="author-info">
+            <div class="name">Elena K.</div>
+            <div class="location">Verified customer · September 2025</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-quote">Third generation of my family to call Sure Lock. My grandfather used Harold in the 90s. My parents still call them. Now so do I. Honest people who explain what they're doing and why. Rare these days.</div>
+        <div class="testimonial-author">
+          <div class="author-initials">JR</div>
+          <div class="author-info">
+            <div class="name">James R.</div>
+            <div class="location">Verified customer · November 2025</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Locked out? Moving in? <em>Not sure what you need?</em></h2>
+    <p>Call Sure Lock & Key — a licensed technician can be on your porch in about 30 minutes, and we're happy to answer questions even if you're not ready to book. No pressure, no upsells, no call-center runaround.</p>
+    <a href="tel:+12037699166" class="cta-phone">(203) 769-9166</a>
+    <div>
+      <div class="cta-availability">
+        <span class="availability-dot"></span>
+        Technicians on call now · 24/7 emergency service
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <div class="logo-mark">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="5" y="11" width="14" height="10" rx="2"/>
+              <path d="M8 11V7a4 4 0 0 1 8 0v4"/>
+            </svg>
+          </div>
+          <div class="logo-text">
+            <span class="name">Sure Lock & Key</span>
+            <span class="tag">Est. 1987</span>
+          </div>
+        </a>
+        <p>Family-owned locksmith and home security services. Licensed by state authorities. Bonded and insured. 38 years of doing it right.</p>
+        <a href="tel:+12037699166" class="footer-phone">(203) 769-9166</a>
+      </div>
+
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services">Residential Rekeying</a></li>
+          <li><a href="#services">Emergency Lockouts</a></li>
+          <li><a href="#services">Smart Lock Install</a></li>
+          <li><a href="#services">Key Duplication</a></li>
+          <li><a href="#services">Safes & Security</a></li>
+          <li><a href="#services">Commercial Security</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Resources</h5>
+        <ul>
+          <li><a href="#approach">How We Work</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#">Warranty</a></li>
+          <li><a href="#">Security Blog</a></li>
+          <li><a href="#">Brands We Install</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#story">Our Story</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Reviews</a></li>
+          <li><a href="#">Press</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2026 Sure Lock & Key, LLC</div>
+      <div class="footer-license">Licensed · Bonded · Insured</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
